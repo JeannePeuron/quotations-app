@@ -6,13 +6,15 @@ const quoteList = document.getElementById("quote-list");
 form.addEventListener("submit", readForm);
 
 function readForm(event) {
-  event.preventDefault();
+  event.preventDefault(); // Pour ne pas que la page se recharge.
 
   const quote = text.value;
   const author = textAuthor.value;
 
   addQuote(quote, author);
 }
+
+let countQuote = 0;
 
 function addQuote(quote, author) {
   const div = document.createElement("div");
@@ -24,20 +26,12 @@ function addQuote(quote, author) {
   `;
 
   quoteList.appendChild(div);
+
+  countQuote += 1;
+
+  const count = document.getElementById("count");
+
+  count.innerHTML = `Nombre de citations : ${countQuote}`;
 }
 
-// Nous allons maintenant afficher les citations saisies directement sur la page.
-
-// - Créez une fonction addQuote(quote, author) prenant deux paramètres (quote et author, du coup).
-// - Dans cette fonction :
-//     - Créez un élément <p> pour la citation et attribuez-lui la classe "text".
-//     - Créez un élément <p> pour l’auteur/autrice et attribuez-lui la classe "author".
-//     - Insérez les valeurs des paramètres quote et author dans ces éléments.
-//     - Créez une <div> avec la classe "quote", puis ajoutez-y les deux paragraphes.
-//     - Récupérez l’élément ayant l’id "quote-list" et ajoutez-y la nouvelle citation avec
-// appendChild().
-// - Modifiez le gestionnaire d’événements du formulaire pour appeler addQuote() au lieu
-// de simplement afficher les valeurs dans la console.
-
-// Besoin d'un coup de main ? Vous pouvez créer un élément en JS avec la fonction
-// document.createElement('div')
+console.log(countQuote);
