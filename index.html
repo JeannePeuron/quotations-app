@@ -4,16 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 
     <title>Application web - Citations</title>
 </head>
 
 <body>
-    <h1>Mes citations</h1>
-    <h2>Gestionnaire de citations en ligne</h2>
-    <h3 id="count">0 citations</h3>
-    <hr>
+
+    <header>
+        <h1>Mes citations</h1>
+        <h2>Bienvenue sur ton gestionnaire de citation en ligne 📔</h2>
+        <h3 id="count">Pour le moment tu n'as pas encore généré de citation. Utilise le formulaire ci-dessous pour en
+            ajouter une : </h3>
+
+
+    </header>
+
     <form action="" id="quotationsAdd">
+
         <div id="quotation">
             <label for="quotation">Saisir la citation : </label>
             <input type="text" id="textQuotation">
@@ -29,6 +37,8 @@
 
     <div id="quote-list">
         <div id="quote">
+            <p> Exemple : </p>
+
             <p class="text">Citation : On ne nait pas femme, on le devient.</p>
             <p class="author">Autrice : Simone de Beauvoir</p>
         </div>

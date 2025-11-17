@@ -1,5 +1,6 @@
 const form = document.getElementById("quotationsAdd");
 const text = document.getElementById("textQuotation");
+
 const textAuthor = document.getElementById("textAuthor");
 const quoteList = document.getElementById("quote-list");
 
@@ -21,6 +22,7 @@ function addQuote(quote, author) {
   div.classList.add("quote");
 
   div.innerHTML = `
+
     <p class="text">Citation : ${quote}</p>
     <p class="author">Auteur.ice : ${author}</p>
   `;
@@ -31,7 +33,7 @@ function addQuote(quote, author) {
 
   const count = document.getElementById("count");
 
-  count.innerHTML = `Nombre de citations : ${countQuote}`;
+  count.innerHTML = `Le nombre de citations que tu as généré est de :  ${countQuote}`;
 }
 
 console.log(countQuote);

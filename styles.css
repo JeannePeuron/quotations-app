@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Montserrat-Medium ";
+    src: url(Montserrat-Medium.ttf);
+}
+
+
+* {
+    font-family: "Montserrat-Medium", sans-serif;
+
+}
+
+
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    text-align: center;
+}
+
+header,
+form,
+#quote-list {
+    background-color: rgba(255, 255, 255, 0.8);
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+
+    text-align: center;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
